@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script type="text/javascript" language="javascript">
+        var x,y;
+        function getvalue(){
+            x=parseInt(document.getElementById("first_number").value);        
+            y=parseInt(document.getElementById("second_number").value);
+        }
+        function add(){
+            var sum;
+            getvalue();
+            sum=x+y;
+            document.getElementById("Result").value=sum;
+        }
+
+        function sub(){
+            var sub;
+            getvalue();
+            sum=x-y;
+            document.getElementById("Result").value=sub;
+        }
+
+        function mult(){
+            var mult;
+            getvalue();
+            sum=x*y;
+            document.getElementById("Result").value=mult;
+        }
+
+        function div(){
+            var div;
+            getvalue();
+            sum=x/y;
+            document.getElementById("Result").value=div;
+        }
+
+    </script>
+    <style>
+        body {
+    margin: 0;
+    background: lightblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkcyan;
+  
+  }
+  .container {
+    background: rgba(232, 236, 229, 0.65);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 85%;
+    max-width: 450px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .temp-container {
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+
+  }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      <h2>Simple Calculator</h2>
+      <div class="temp-container">
+         <label>Enter first number:</label>
+    <input type="text" id="first_number" placeholder="Enter first number">
+    </div>
+     
+    <div class="temp-container">
+    <label>Enter second number:</label>
+    <input type="text" id="second_number" placeholder="Enter second number">
+    </div>
+    <br>
+    <button onclick="add()">ADD</button> &nbsp;
+    <button onclick="SUB()">SUB</button> &nbsp;
+    <button onclick="mult()">MULT</button> &nbsp;
+    <button onclick="div()">DIV</button> &nbsp;
+
+    <label>Result:</label>
+    <input type="text" id="Result" >
+    </div>
+
+    
+</body>
+</html>
